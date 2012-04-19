@@ -1,0 +1,46 @@
+This project implements a Genetic Algorithm for approximating Max Clique
+
+To execute the project on DIMACS `.clq' instances, create a directory 
+
+	$ mkdir DIMACS_cliques
+
+and store the clique instances that you would like to test.
+
+The clique instances can be downloaded from:
+	http://cs.hbg.psu.edu/txn131/clique.html
+or
+	ftp://dimacs.rutgers.edu/pub/challenge/graph/benchmarks/clique/
+
+Some instances are in binary format `*.clq.b', 
+	and may require the bin2asc utility to convert to `*.clq'.  This utility can be downloaded from:
+
+	http://cs.hbg.psu.edu/txn131/file_instances/converter.tar.gz
+
+------------------------------------------------------------
+
+The files required to build the algorithm implementation are:
+
+	dimacsClq.h				--- defines graph structure, and input DIMACS `.clq' input
+	dimacsClq.cpp
+	setOperations.h			--- defines set operations for std::vector<uint64_t>
+	setOperations.cpp
+	gaClique.cpp			--- implementation of the heuristic and main invocation of GA
+
+------------------------------------------------------------
+
+The Perl script `buildGA.pl' is written to build the executable, and invoke the tests 
+
+Run this file from the command line with
+	
+	$ perl buildGA.pl
+	
+It will execute the test for all `*.clq' contained within the directory `DIMACS_cliques'
+
+------------------------------------------------------------
+
+The report and presentation are included as `.pdf' documents:
+
+	BIIS_FinalReport_Carley.pdf
+	BIIS_presentation_Carley.pdf
+	
+	
